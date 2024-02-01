@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #9370DB; /* Warna ungu muda */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    background-color: #8A2BE2; /* Warna ungu tua */
+    overflow: hidden;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #A020F0; /* Warna ungu tua saat hover */
+    color: #fff;
+}
+
+section {
+    padding: 20px;
+}
+
+.info-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 20px; /* Jarak antara logo dan teks */
+}
+
+h2 {
+    color: #040008;
+    font-size: 28px; /* Ukuran teks judul lebih besar */
+}
+
+p {
+    color: #333;
+    font-size: 18px; /* Ukuran teks konten lebih besar */
+}
+
+.slide-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slide-img {
+    width: 40%; /* Ubah lebar gambar slide sesuai kebutuhan */
+}
+
+.menu-container {
+    width: 50%; /* Ubah lebar menu sesuai kebutuhan */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+.menu-container h3 {
+    color: #8A2BE2;
+    font-size: 18px;
+}
+
+.menu-container table {
+    width: 100%;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Mengatur konten di atas */
+    flex-wrap: wrap; /* Agar kotak konten dapat melibat lebih dari satu baris jika dibutuhkan */
+}
+
+.content-box {
+    width: 30%; /* Sesuaikan lebar kotak konten sesuai kebutuhan */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-box h3 {
+    color: #8A2BE2;
+    font-size: 18px;
+}
+
+.content-box p {
+    color: #333;
+    font-size: 16px;
+}
+
+footer {
+    background-color: #8A2BE2; /* Warna ungu tua */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
