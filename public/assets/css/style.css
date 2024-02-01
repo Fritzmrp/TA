@@ -6,14 +6,14 @@ body {
 }
 
 header {
-    background-color: #9370DB; /* Warna ungu muda */
+    background-color: #9370DB; 
     color: #fff;
     padding: 15px;
     text-align: center;
 }
 
 nav {
-    background-color: #8A2BE2; /* Warna ungu tua */
+    background-color: #8A2BE2; 
     overflow: hidden;
     text-align: center;
 }
@@ -27,7 +27,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #A020F0; /* Warna ungu tua saat hover */
+    background-color: #A020F0; 
     color: #fff;
 }
 
@@ -45,17 +45,17 @@ section {
 }
 
 .logo {
-    margin-right: 20px; /* Jarak antara logo dan teks */
+    margin-right: 20px; 
 }
 
 h2 {
     color: #040008;
-    font-size: 28px; /* Ukuran teks judul lebih besar */
+    font-size: 28px; 
 }
 
 p {
     color: #333;
-    font-size: 18px; /* Ukuran teks konten lebih besar */
+    font-size: 18px; 
 }
 
 .slide-container {
@@ -65,11 +65,11 @@ p {
 }
 
 .slide-img {
-    width: 40%; /* Ubah lebar gambar slide sesuai kebutuhan */
+    width: 40%; 
 }
 
 .menu-container {
-    width: 50%; /* Ubah lebar menu sesuai kebutuhan */
+    width: 50%; 
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
@@ -86,32 +86,33 @@ p {
 
 .content-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start; /* Mengatur konten di atas */
-    flex-wrap: wrap; /* Agar kotak konten dapat melibat lebih dari satu baris jika dibutuhkan */
 }
 
 .content-box {
-    width: 30%; /* Sesuaikan lebar kotak konten sesuai kebutuhan */
+    width: 30%; 
+    margin-bottom: 20px;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .content-box h3 {
-    color: #8A2BE2;
+    color: #8A2BE2; 
     font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .content-box p {
     color: #333;
     font-size: 16px;
+    line-height: 1.6;
 }
 
 footer {
-    background-color: #8A2BE2; /* Warna ungu tua */
+    background-color: #8A2BE2; 
     color: #fff;
     padding: 10px;
     text-align: center;
