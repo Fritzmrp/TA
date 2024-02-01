@@ -58,6 +58,7 @@ p {
     font-size: 18px; 
 }
 
+
 .slide-container {
     display: flex;
     justify-content: space-between;
@@ -65,7 +66,86 @@ p {
 }
 
 .slide-img {
-    width: 40%; 
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-img img {
+    max-width: 100%; /* Maksimum lebar gambar adalah 100% dari parent */
+    height: auto; /* Tinggi gambar disesuaikan agar tetap proporsional */
+    border-radius: 8px; /* Optional: add border-radius to images */
+    transition: transform 0.5s ease; /* Animation effect */
+}
+
+
+.slide {
+    width: 100%; /* Gambar menjadi responsif */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.5s ease; /* Efek animasi */
+}
+
+.slide-img button {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s; /* Efek animasi warna */
+}
+
+.slide-img button:hover {
+    color: #A020F0; /* Warna ungu tua saat hover */
+}
+
+#prevButton, #nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#prevButton, #nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px; /* Ubah ukuran font sesuai keinginan */
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none; /* Hilangkan outline pada tombol */
+}
+
+#prevButton {
+    left: 10px;
+}
+
+#nextButton {
+    right: 10px;
+}
+
+#prevButton:hover, #nextButton:hover {
+    color: #A020F0;
+}
+
+/* Tambahkan gaya untuk memastikan tombol berada di atas gambar */
+#slideImage {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Tambahkan transisi agar perpindahan gambar lebih halus */
+.slide {
+    transition: transform 0.5s ease;
 }
 
 .menu-container {

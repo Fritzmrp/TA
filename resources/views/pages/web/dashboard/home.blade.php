@@ -34,10 +34,12 @@
             </div>
         </div>
 
-        <div class="slide-container">
-            <div class="slide-img">
-                <img src="assets/images/PendaftaranUSM.jpg" alt="Slide Image" width="100%" height="auto">
-            </div>
+        <div class="slide-container" id="slideContainer">
+            <div class="slide-img" id="slideImage">
+                <button id="prevButton">&lt;</button>
+                <img src="assets/images/PendaftaranUSM.jpg" alt="Slide Image" id="slide" class="slide">
+                <button id="nextButton">&gt;</button>
+            </div>            
             <div class="menu-container">
                 <h3>Jadwal Pendaftaran</h3>
                 <table>
@@ -157,6 +159,7 @@
     </footer>
 
     <script src="assets/js/chatbot.js"></script>
+    <script src="assets/js/slideshow.js"></script>
 </body>
 
 </html>
