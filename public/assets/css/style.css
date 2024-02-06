@@ -72,18 +72,18 @@ p {
 }
 
 .slide-img img {
-    max-width: 100%; /* Maksimum lebar gambar adalah 100% dari parent */
-    height: auto; /* Tinggi gambar disesuaikan agar tetap proporsional */
-    border-radius: 8px; /* Optional: add border-radius to images */
-    transition: transform 0.5s ease; /* Animation effect */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+    transition: transform 0.5s ease;
 }
 
 
 .slide {
-    width: 100%; /* Gambar menjadi responsif */
+    width: 100%;
     height: auto;
     border-radius: 8px;
-    transition: transform 0.5s ease; /* Efek animasi */
+    transition: transform 0.5s ease;
 }
 
 .slide-img button {
@@ -94,11 +94,11 @@ p {
     border: none;
     color: #fff;
     cursor: pointer;
-    transition: color 0.3s; /* Efek animasi warna */
+    transition: color 0.3s;
 }
 
 .slide-img button:hover {
-    color: #A020F0; /* Warna ungu tua saat hover */
+    color: #A020F0;
 }
 
 #prevButton, #nextButton {
@@ -116,12 +116,12 @@ p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 30px; /* Ubah ukuran font sesuai keinginan */
+    font-size: 30px;
     background: none;
     border: none;
     color: #fff;
     cursor: pointer;
-    outline: none; /* Hilangkan outline pada tombol */
+    outline: none;
 }
 
 #prevButton {
@@ -136,14 +136,12 @@ p {
     color: #A020F0;
 }
 
-/* Tambahkan gaya untuk memastikan tombol berada di atas gambar */
 #slideImage {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-/* Tambahkan transisi agar perpindahan gambar lebih halus */
 .slide {
     transition: transform 0.5s ease;
 }

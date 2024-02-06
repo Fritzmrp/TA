@@ -117,14 +117,11 @@
             <h4>Chatbot SPMB IT Del</h4>
         </div>
         <div id="chatbot-content" class="chatbot-content">
-            <!-- Pesan sambutan -->
             <div class="chat-message" id="welcome-message">
                 <p><strong>Admin SPMB IT Del</strong></p>
                 <p>Hello! I'm the Admin of SPMB IT Del, your AI powered assistant here to help you with all your needs! 😊</p>
                 <p>May I know what you want to ask about SPMB IT Del?</p>
             </div>
-    
-            <!-- Suggestions -->
             <div class="suggestions">
                 <div class="left-suggestions">
                     <p><strong>Suggestions:</strong></p>

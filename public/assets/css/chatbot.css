@@ -1,9 +1,8 @@
-/* CSS untuk chatbot button */
 .chatbot-button {
     position: fixed;
     bottom: 50px;
     right: 20px;
-    background-color: #8A2BE2; /* Warna ungu tua */
+    background-color: #8A2BE2; 
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
@@ -12,16 +11,15 @@
 }
 
 .chatbot-button img {
-    width: 30px; /* Ukuran gambar chatbot icon */
+    width: 30px; 
     height: 30px;
     display: block;
 }
 
 .chatbot-button:hover {
-    background-color: #A020F0; /* Warna ungu tua saat hover */
+    background-color: #A020F0; 
 }
 
-/* CSS untuk chatbot container */
 .chatbot-container {
     display: none;
     position: fixed;
@@ -37,7 +35,7 @@
 }
 
 .chatbot-header {
-    background-color: #8A2BE2; /* Warna ungu tua */
+    background-color: #8A2BE2; 
     color: #fff;
     padding: 10px;
     border-top-left-radius: 8px;
@@ -62,21 +60,18 @@
     height: 340px;
 }
 
-/* Pesan sambutan */
 #welcome-message {
     margin-bottom: 20px;
 }
 
-/* Suggestions */
 .suggestions {
     display: flex;
     justify-content: space-between;
 }
 
-/* CSS untuk suggestion kiri */
 .left-suggestions {
     float: left;
-    width: 45%; /* Sesuaikan lebar sesuai kebutuhan */
+    width: 45%;
 }
 
 .left-suggestions ul {
@@ -85,7 +80,7 @@
 }
 
 .left-suggestions li {
-    background-color: #8A2BE2; /* Warna ungu tua */
+    background-color: #8A2BE2;
     color: #fff;
     padding: 8px;
     border-radius: 4px;
@@ -95,13 +90,12 @@
 }
 
 .left-suggestions li:hover {
-    background-color: #A020F0; /* Warna ungu tua saat hover */
+    background-color: #A020F0;
 }
 
-/* CSS untuk suggestion kanan */
 .right-suggestions {
     float: right;
-    width: 45%; /* Sesuaikan lebar sesuai kebutuhan */
+    width: 45%;
 }
 
 .right-suggestions ul {
@@ -110,7 +104,7 @@
 }
 
 .right-suggestions li {
-    background-color: #8A2BE2; /* Warna ungu tua */
+    background-color: #8A2BE2;
     color: #fff;
     padding: 8px;
     border-radius: 4px;
@@ -120,10 +114,9 @@
 }
 
 .right-suggestions li:hover {
-    background-color: #A020F0; /* Warna ungu tua saat hover */
+    background-color: #A020F0; 
 }
 
-/* CSS untuk input dan button chatbot */
 .chatbot-input {
     display: flex;
     justify-content: space-between;
@@ -138,7 +131,7 @@
 }
 
 .chatbot-input button {
-    background-color: #8A2BE2; /* Warna ungu tua */
+    background-color: #8A2BE2;
     color: #fff;
     padding: 8px 16px;
     border: none;
@@ -147,5 +140,5 @@
 }
 
 .chatbot-input button:hover {
-    background-color: #A020F0; /* Warna ungu tua saat hover */
+    background-color: #A020F0;
 }

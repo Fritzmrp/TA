@@ -1,5 +1,3 @@
-// JavaScript untuk mengatur slideshow
-
 var images = [
     "assets/images/PendaftaranUSM.jpg",
     "assets/images/PendaftaranPMDK.jpg",
@@ -33,5 +31,4 @@ function updateSlide() {
 nextButton.addEventListener('click', showNextImage);
 prevButton.addEventListener('click', showPreviousImage);
 
-// Ganti gambar setiap 5 detik (jika masih diinginkan)
 setInterval(showNextImage, 5000);
