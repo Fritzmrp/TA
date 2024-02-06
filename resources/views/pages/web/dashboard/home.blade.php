@@ -36,12 +36,22 @@
 
         <div class="slide-container" id="slideContainer">
             <div class="slide-img" id="slideImage">
-                <button id="prevButton">&lt;</button>
+                <button id="prevButton" class="slide-button">&lt;</button>
                 <img src="assets/images/PendaftaranUSM.jpg" alt="Slide Image" id="slide" class="slide">
-                <button id="nextButton">&gt;</button>
-            </div>            
+                <button id="nextButton" class="slide-button">&gt;</button>
+            </div>                 
             <div class="menu-container">
-                <h3>Jadwal Pendaftaran</h3>
+                <div class="menu-options">
+                    <div class="menu">
+                        <h3>Jadwal Pendaftaran</h3>
+                    </div>
+                    <div class="menu">
+                        <h3>Jenis Tes</h3>
+                    </div>
+                    <div class="menu">
+                        <h3>Lokasi</h3>
+                    </div>
+                </div>
                 <table>
                     <tr>
                         <td>JPS</td>
@@ -68,12 +78,14 @@
                         <td>10 Juni 2024 - 04 Juli 2024</td>
                     </tr>
                 </table>
-            </div>
+            </div>            
         </div>
 
         <div class="content-container">
             <div class="content-box">
-                <h3>MARTUHAN</h3>
+                <div class="title-box martuhan">
+                    <h3>MARTUHAN</h3>
+                </div>
                 <p>
                     MarTuhan adalah keyakinan akan keberadaan Tuhan dan kesetiaan untuk mengenal dan mengasihi Tuhan, sebagai sambutan atas kasih Tuhan kepada manusia, yang membangkitkan gairah belajar disiplin kontemplatif spiritual yang membentuk pembaharuan budi sehingga menimbulkan kepedulian mengasihi sesama dan pengabdian dalam kehidupan bermasyarakat.
 
@@ -83,24 +95,28 @@
                     2.Belajar disiplin kontemplatif spiritual merupakan ciri pemelajar untuk semakin mengalami kedewasaan relasi dengan Tuhan yang menimbulkan pembaharuan budi, dan
                     3.Keinginan untuk mengembangkan sesama dengan berbicara, mendengar, dan bersama merasakan kehadiran Allah memampukan diri bertumbuh dan bersaksi terhadap perubahan budi pekerti yang saling membangun.
 
-                    Iman: belajar dan berbuat menuju pembaharuan budi
+                    Iman: belajar dan berbuat menuju pembaharuan budi.
                 </p>
             </div>
 
             <div class="content-box">
-                <h3>MARROHA</h3>
+                <div class="title-box marroha">
+                    <h3>MARROHA</h3>
+                </div>
                 <p>
                     Marroha adalah sikap dalam bertindak berlandaskan pada kerendahan hati dengan penuh tanggung jawab, melakukan apapun dengan hati, dan tunduk pada nilai-nilai moral dalam kaitannya dengan makhluk hidup lainnya.
 
-                    Integritas: kesadaran moral dan etika menuju kebajikan
+                    Integritas: kesadaran moral dan etika menuju kebajikan.
                 </p>
             </div>
 
             <div class="content-box">
-                <h3>MARBISUK</h3>
+                <div class="title-box marbisuk">
+                    <h3>MARBISUK</h3>
+                </div>
                 <p>
                     Marbisuk adalah bijaksana berdasarkan hikmat yang mengedepankan kearifan dan pengertian berdasarkan penguasaan pengetahuan dan kecakapan dalam bekerja dan kesediaan belajar sepanjang hayat.
-
+ 
                     Ilmu: cakap dan berkarya dengan akal budi menuju hikmat
                 </p>
             </div>

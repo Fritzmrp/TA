@@ -26,7 +26,10 @@ function showPreviousImage() {
 
 function updateSlide() {
     slideImage.src = images[currentImageIndex];
+    slideImage.style.width = "720px";
+    slideImage.style.height = "480px";
 }
+
 
 nextButton.addEventListener('click', showNextImage);
 prevButton.addEventListener('click', showPreviousImage);

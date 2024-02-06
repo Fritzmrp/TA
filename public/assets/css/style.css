@@ -24,12 +24,17 @@ nav a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    background-color: transparent;
 }
 
 nav a:hover {
-    background-color: #A020F0; 
-    color: #fff;
+    background-color: #000;
 }
+
+nav a.active {
+    background-color: #000;
+}
+
 
 section {
     padding: 20px;
@@ -42,6 +47,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -49,33 +55,40 @@ section {
 }
 
 h2 {
-    color: #040008;
-    font-size: 28px; 
+    color: #050009;
+    font-size: 30px; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
 }
 
 p {
-    color: #333;
-    font-size: 18px; 
+    color: #000000;
+    font-size: 30px; 
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
-
 
 .slide-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .slide-img {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
 .slide-img img {
-    max-width: 100%;
+    max-width: 720px; 
+    max-height: 480px; 
+    width: auto;
     height: auto;
-    border-radius: 8px; 
-    transition: transform 0.5s ease;
 }
 
 
@@ -106,22 +119,12 @@ p {
     top: 50%;
     transform: translateY(-50%);
     font-size: 24px;
-    background: none;
+    background: rgba(0, 0, 0, 0.5); 
     border: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-#prevButton, #nextButton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: #fff;
+    color: #fff; 
     cursor: pointer;
     outline: none;
+    padding: 10px; 
 }
 
 #prevButton {
@@ -162,10 +165,19 @@ p {
     width: 100%;
 }
 
+.menu-options {
+    display: flex;
+}
+
+.menu {
+    margin-left: 20px; 
+}
+
 .content-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .content-box {
@@ -178,15 +190,38 @@ p {
 }
 
 .content-box h3 {
-    color: #8A2BE2; 
     font-size: 18px;
     margin-bottom: 10px;
 }
 
 .content-box p {
-    color: #333;
+    color: #333333;
     font-size: 16px;
     line-height: 1.6;
+    font-weight: normal;
+}
+
+.title-box {
+    padding: 10px; 
+    border-radius: 8px; 
+}
+
+.martuhan {
+    background-color: #d9edf7;
+    color: #31708f; 
+    border: 2px solid #bce8f1; 
+}
+
+.marroha {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 2px solid #d6e9c6;
+}
+
+.marbisuk {
+    color: #a94442;
+    background-color: #f2dede;
+    border: 2px solid #ebccd1;
 }
 
 footer {
@@ -194,4 +229,9 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: center;
+}
+
+footer p {
+    font-weight: normal; 
+    font-size: 20px;
 }
