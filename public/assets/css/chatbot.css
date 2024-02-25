@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 50px;
     right: 20px;
-    background-color: #8A2BE2; 
+    background-color: #8E24AA; 
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
@@ -17,7 +17,7 @@
 }
 
 .chatbot-button:hover {
-    background-color: #A020F0; 
+    background-color: #8E24AA; 
 }
 
 .chatbot-container {
@@ -35,7 +35,7 @@
 }
 
 .chatbot-header {
-    background-color: #8A2BE2; 
+    background-color: #8E24AA; 
     color: #fff;
     padding: 10px;
     border-top-left-radius: 8px;
@@ -80,7 +80,7 @@
 }
 
 .left-suggestions li {
-    background-color: #8A2BE2;
+    background-color: #8E24AA;
     color: #fff;
     padding: 8px;
     border-radius: 4px;
@@ -90,7 +90,7 @@
 }
 
 .left-suggestions li:hover {
-    background-color: #A020F0;
+    background-color: #8E24AA;
 }
 
 .right-suggestions {
@@ -104,7 +104,7 @@
 }
 
 .right-suggestions li {
-    background-color: #8A2BE2;
+    background-color: #8E24AA;
     color: #fff;
     padding: 8px;
     border-radius: 4px;
@@ -114,7 +114,7 @@
 }
 
 .right-suggestions li:hover {
-    background-color: #A020F0; 
+    background-color: #8E24AA; 
 }
 
 .chatbot-input {
@@ -131,7 +131,7 @@
 }
 
 .chatbot-input button {
-    background-color: #8A2BE2;
+    background-color: #8E24AA;
     color: #fff;
     padding: 8px 16px;
     border: none;
@@ -140,5 +140,9 @@
 }
 
 .chatbot-input button:hover {
-    background-color: #A020F0;
+    background-color: #8E24AA;
+}
+/* Add this style to your CSS file */
+.chatbot-input button {
+    display: block;
 }
