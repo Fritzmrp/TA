@@ -134,7 +134,6 @@
                                                     <img src="{{ asset('assets/images/del/PendaftaranPMDK_V2.jpg') }}"  alt="Slide 1" style=" margin:0px;"></a>
                                                 <div class="carousel-caption  d-none d-md-block">
                                                     <a>ALUR PENDAFTARAN PMDK</a>
-
                                                 </div>
                                             </div>
                                             <div class="item center">
@@ -169,7 +168,7 @@
 
                                                 </div>
                                             </div>
-                                            <div class="item center">
+                                            {{-- <div class="item center">
                                                 <img src="image/slider001.jpg" alt="Slide 2" style=" margin:0px;">
                                                 <div class="carousel-caption">
 
@@ -180,7 +179,7 @@
                                                 <div class="carousel-caption">
 
                                                 </div>
-                                            </div>
+                                            </div> --}}
 
                                         </div>
                                     </center>
@@ -482,22 +481,20 @@
                 <!-- //////////////////////////////////////////////////////////////////////////////////// -->
                 <footer class="footer">
                     <div class="container">
-
                         <footer class="site-footer">
                             <div class="container">
                                 <div class="row">
                                     <hr>
                                     <p class="pull-left" style="color: #004D40">&copy; <b>SPMB Institut Teknologi Del 2024</b></p>
 
-                                    <p class="pull-right"><img src="/image/logo_del.png" height="60" width="60"></p>
-                                    <p class="pull-right"><img src="/image/yayasandel.jpg" height="60" width="60"></p>
-                                    <p class="pull-right"><img src="/image/smaungguldel.jpg" height="60" width="60"></p>
+                                    <p class="pull-right"><img src="/assets/images/logo_del.png" height="60" width="60"></p>
+                                    <p class="pull-right"><img src="/assets/images/yayasandel.jpg" height="60" width="60"></p>
+                                    <p class="pull-right"><img src="/assets/images/smaungguldel.jpg" height="60" width="60"></p>
 
                                     </hr>
                                 </div>
                             </div>
                         </footer>
-
                     </div>
                 </footer>
 
