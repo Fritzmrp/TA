@@ -1,41 +1,44 @@
+/* Chatbot button styling */
 .chatbot-button {
     position: fixed;
-    bottom: 50px;
+    bottom: 20px;
     right: 20px;
-    background-color: #8E24AA; 
-    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #8E24AA;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
-}
-
-.chatbot-button img {
-    width: 30px; 
-    height: 30px;
-    display: block;
+    z-index: 9999; /* Make sure it's above other content */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .chatbot-button:hover {
-    background-color: #8E24AA; 
+    background-color: #7b1fa2;
+    transform: scale(1.1); /* Add slight scale effect on hover */
 }
 
+.chatbot-button img {
+    width: 100%;
+    height: auto;
+}
+
+/* Chatbot container styling */
 .chatbot-container {
     display: none;
     position: fixed;
-    bottom: 0;
+    bottom: 90px; /* Adjust as needed */
     right: 20px;
     width: 300px;
-    height: 400px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 1;
+    z-index: 9998; /* Make sure it's below the button */
 }
 
 .chatbot-header {
-    background-color: #8E24AA; 
+    background-color: #8E24AA;
     color: #fff;
     padding: 10px;
     border-top-left-radius: 8px;
@@ -56,54 +59,27 @@
 
 .chatbot-content {
     padding: 20px;
-    overflow-y: scroll;
-    height: 340px;
-}
-
-#welcome-message {
-    margin-bottom: 20px;
+    overflow-y: auto; /* Allow content to be scrolled if it exceeds container height */
+    max-height: 300px; /* Adjust as needed */
 }
 
 .suggestions {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
-.left-suggestions {
-    float: left;
-    width: 45%;
-}
-
-.left-suggestions ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.left-suggestions li {
-    background-color: #8E24AA;
-    color: #fff;
-    padding: 8px;
-    border-radius: 4px;
-    margin-bottom: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.left-suggestions li:hover {
-    background-color: #8E24AA;
-}
-
+.left-suggestions,
 .right-suggestions {
-    float: right;
     width: 45%;
 }
 
-.right-suggestions ul {
+.suggestions ul {
     list-style-type: none;
     padding: 0;
 }
 
-.right-suggestions li {
+.suggestions li {
     background-color: #8E24AA;
     color: #fff;
     padding: 8px;
@@ -113,16 +89,14 @@
     transition: background-color 0.3s;
 }
 
-.right-suggestions li:hover {
-    background-color: #8E24AA; 
+.suggestions li:hover {
+    background-color: #7b1fa2;
 }
 
 .chatbot-input {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    border-top: 1px solid #ddd;
+    margin-top: 20px;
 }
 
 .chatbot-input input {
@@ -137,12 +111,9 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .chatbot-input button:hover {
-    background-color: #8E24AA;
-}
-/* Add this style to your CSS file */
-.chatbot-input button {
-    display: block;
+    background-color: #7b1fa2;
 }

@@ -305,35 +305,33 @@
                                         <span class='alert-danger'>* HANYA UNTUK USM DENGAN TES AKADEMIK ONSITE</span>
                                         <table class="table">
                                             <tr>
-                                                <td>Kampus Institut Teknologi Del</td>
+                                                <td><b>Kampus Institut Teknologi Del</b></td>
                                                 <td></td>
                                                 <td>
-                                                    Jl. Sisingamangaraja, Sitoluama
-                                                    Laguboti,
-                                                    <br>Toba Samosir
-                                                    Sumatera Utara
+                                                    Jl. Sisingamangaraja, Sitoluama<br>
+                                                    Laguboti, Toba Samosir, Sumatera Utara
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Medan</td>
+                                                <td><b>Medan</b></td>
                                                 <td></td>
                                                 <td>
                                                     Kampus Universitas HKBP Nommensen (Medan)
-                                                    <br>Jl Perintis Kemerdekaan No.23, Perintis, Medan
+                                                    Jl Perintis Kemerdekaan No.23, Perintis, Medan
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Jakarta</td>
+                                                <td><b>Jakarta</b></td>
                                                 <td></td>
                                                 <td>
-                                                    Sopo Del Office Towers & Lifestyle Tower A Lt. 9
-                                                    <br />Jl. Mega Kuningan Barat III Lot 10.1-6
-                                                    <br />Jakarta Selatan 12950
-                                                    <br />No. tlp : 021 - 5080 6565
+                                                    Sopo Del Office Towers & Lifestyle Tower A Lt. 9<br>
+                                                    Jl. Mega Kuningan Barat III Lot 10.1-6
+                                                    Jakarta Selatan 12950
+                                                    No. tlp : 021 - 5080 6565
                                                 </td>
                                             </tr>
                                         </table>
-                                    </div>
+                                    </div>                                    
                                 </div>
                             </div>
                         </div>
@@ -350,7 +348,9 @@
                                         mengasihi Tuhan, sebagai sambutan atas kasih Tuhan kepada manusia, yang
                                         membangkitkan gairah belajar disiplin kontemplatif spiritual yang membentuk
                                         pembaharuan budi sehingga menimbulkan kepedulian mengasihi sesama dan pengabdian
-                                        dalam kehidupan bermasyarakat.. <a href="/index.php?r=site%2Fviewmartuhan&amp;id=1">Baca Selengkapnya</a></p>
+                                        dalam kehidupan bermasyarakat.
+                                        <a href="https://spmb.del.ac.id/index.php?r=site%2Fviewmartuhan&amp;id=1" target="_blank">Baca Selengkapnya</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -362,7 +362,9 @@
                                 <div class="panel-body">
                                     <p>Marroha adalah sikap dalam bertindak berlandaskan pada kerendahan hati dengan
                                         penuh tanggung jawab, melakukan apapun dengan hati, dan tunduk pada nilai-nilai
-                                        moral dalam kaitannya dengan makhluk hidup lainnya.. <a href="/index.php?r=site%2Fviewmarroha&amp;id=1">Baca Selengkapnya</a></p>
+                                        moral dalam kaitannya dengan makhluk hidup lainnya.
+                                        <a href="https://spmb.del.ac.id/index.php?r=site%2Fviewmarroha&amp;id=1" target="_blank">Baca Selengkapnya</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -374,7 +376,9 @@
                                 <div class="panel-body">
                                     <p>Marbisuk adalah bijaksana berdasarkan hikmat yang mengedepankan kearifan dan
                                         pengertian berdasarkan penguasaan pengetahuan dan kecakapan dalam bekerja dan
-                                        kesediaan belajar sepanjang hayat.. <a href="/index.php?r=site%2Fviewmarbisuk&amp;id=1">Baca Selengkapnya</a></p>
+                                        kesediaan belajar sepanjang hayat.
+                                        <a href="https://spmb.del.ac.id/index.php?r=site%2Fviewmarbisuk&amp;id=1" target="_blank">Baca Selengkapnya</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
