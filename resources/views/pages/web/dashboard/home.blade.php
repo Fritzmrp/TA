@@ -108,63 +108,66 @@
                                         <div class="carousel-inner acc_slider" style="height:350px;">
                                             <div class="item active center">
                                                 <a href="image/PendaftaranPMDK_V2.jpg" target="_blank" class="pointer">
-                                                    <img src="{{ asset('assets/images/del/PendaftaranPMDK_V2.jpg') }}"  alt="Slide 1" style=" margin:0px;"></a>
+                                                    <img id="slide" src="{{ asset('assets/images/del/PendaftaranPMDK_V2.jpg') }}"  alt="Slide 1" style=" margin:0px;">
+                                                </a>
                                                     <div class="carousel-caption  d-none d-md-block">
                                                         <a>ALUR PENDAFTARAN PMDK</a>
                                                     </div>
                                                 </div>
                                                 <div class="item center">
                                                     <a href="image/PendaftaranUSM_V2.jpg" target="_blank" class="pointer">
-                                                        <img src="{{ asset('assets/images/del/PendaftaranUSM_V2.jpg') }}" alt="Slide 2" style=" margin:0px;">
+                                                        <img id="slide" src="{{ asset('assets/images/del/PendaftaranUSM_V2.jpg') }}" alt="Slide 2" style=" margin:0px;">
                                                     </a>
                                                     <div class="carousel-caption">
-
+                        
                                                     </div>
                                                 </div>
                                              <div class="item center">
                                                 <a href="image/PendaftaranUTBK_V2.jpg" target="_blank" class="pointer">
-                                                    <img src="{{ asset('assets/images/del/PendaftaranUTBK_V2.jpg') }}" alt="Slide 3" style=" margin:0px;">
+                                                    <img id="slide" src="{{ asset('assets/images/del/PendaftaranUTBK_V2.jpg') }}" alt="Slide 3" style=" margin:0px;">
                                                 </a>
                                                 <div class="carousel-caption">
-
+                        
                                                 </div>
                                             </div>
                                             <div class="item center">
                                                 <a href="image/Ulang.jpg" target="_blank" class="pointer">
-                                                    <img src="{{ asset('assets/images/del/Ulang.jpg') }}" alt="Slide 2" style=" margin:0px;">
+                                                    <img id="slide" src="{{ asset('assets/images/del/Ulang.jpg') }}" alt="Slide 4" style=" margin:0px;">
                                                 </a>
                                                 <div class="carousel-caption">
-
+                        
                                                 </div>
                                             </div>
                                             <div class="item center">
                                                 <a href="image/Jalur.jpg" target="_blank" class="pointer">
-                                                    <img src="{{ asset('assets/images/del/Jalur.jpg') }}" alt="Slide 2" style=" margin:0px;">
+                                                    <img id="slide" src="{{ asset('assets/images/del/Jalur.jpg') }}" alt="Slide 5" style=" margin:0px;">
                                                 </a>
                                                 <div class="carousel-caption">
-
-                                                </div>
-                                            </div>
-                                            {{-- <div class="item center">
-                                                <img src="image/slider001.jpg" alt="Slide 2" style=" margin:0px;">
-                                                <div class="carousel-caption">
-
+                        
                                                 </div>
                                             </div>
                                             <div class="item center">
-                                                <img src="image/slider007.JPG" alt="Slide 2" style=" margin:0px;">
+                                                <a href="image/del.jpg" target="_blank" class="pointer">
+                                                    <img id="slide" src="{{ asset('assets/images/del/del.jpg') }}" alt="Slide 6" style=" margin:0px;">
+                                                </a>
                                                 <div class="carousel-caption">
-
+                        
                                                 </div>
-                                            </div> --}}
+                                            </div>
+                                            <div class="item center">
+                                                <a href="image/del2.jpg" target="_blank" class="pointer">
+                                                    <img id="slide" src="{{ asset('assets/images/del/del2.jpg') }}" alt="Slide 7" style=" margin:0px;">
+                                                </a>
+                                                <div class="carousel-caption">
+                        
+                                                </div>
+                                            </div>
                                         </div>
                                     </center>
-
-                                    <!-- Control -->
-                                    <a href="#carousel-example-generic" class="carousel-control left" data-slide="prev" role="button">
+                                    <a id="prevButton" href="#carousel-example-generic" class="carousel-control left" data-slide="prev" role="button">
                                         <span class="glyphicon glyphicon-chevron-left"></span>
                                     </a>
-                                    <a href="#carousel-example-generic" class="carousel-control right" data-slide="next" role="button">
+                                    <a id="nextButton" href="#carousel-example-generic" class="carousel-control right" data-slide="next" role="button">
                                         <span class="glyphicon glyphicon-chevron-right"></span>
                                     </a>
                                 </div>

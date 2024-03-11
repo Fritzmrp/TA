@@ -1,18 +1,17 @@
+var currentImageIndex = 0;
 var images = [
-    "assets/images/PendaftaranUSM.jpg",
-    "assets/images/PendaftaranPMDK.jpg",
-    "assets/images/del.jpg",
-    "assets/images/PendaftaranUTBK.jpg",
-    "assets/images/Ulang.jpg",
-    "assets/images/Jalur.jpg",
-    "assets/images/del2.jpg"
+    "assets/images/del/PendaftaranPMDK_V2.jpg",
+    "assets/images/del/PendaftaranUSM_V2.jpg",
+    "assets/images/del/PendaftaranUTBK_V2.jpg",
+    "assets/images/del/Ulang.jpg",
+    "assets/images/del/Jalur.jpg",
+    "assets/images/del/del.jpg",
+    "assets/images/del/del2.jpg"
 ];
 
-var currentImageIndex = 0;
-var slideContainer = document.getElementById('slideContainer');
-var slideImage = document.getElementById('slide');
-var prevButton = document.getElementById('prevButton');
+var slideImage = document.querySelector('.carousel-inner img');
 var nextButton = document.getElementById('nextButton');
+var prevButton = document.getElementById('prevButton');
 
 function showNextImage() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
@@ -26,12 +25,10 @@ function showPreviousImage() {
 
 function updateSlide() {
     slideImage.src = images[currentImageIndex];
-    slideImage.style.width = "720px";
-    slideImage.style.height = "480px";
 }
-
 
 nextButton.addEventListener('click', showNextImage);
 prevButton.addEventListener('click', showPreviousImage);
 
-setInterval(showNextImage, 5000);
+setInterval(showNextImage, 3000);
+
