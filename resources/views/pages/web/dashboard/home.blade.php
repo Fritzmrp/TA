@@ -12,6 +12,8 @@
     <link href="assets/css/chatbot.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap JS -->
@@ -20,7 +22,7 @@
 
 <body>
     <div class="wrap">
-        <nav id="w0" class="navbar-inverse navbar-fixed-top navbar">
+        <nav id="w0" class="navbar-inverse2 navbar-fixed-top navbar">
             <div class="container">
                 <div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w0-collapse"><span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -182,9 +184,9 @@
                                 <li role="presentation" class="nav-item"><a href="#test" aria-controls="test" role="tab" data-toggle="tab" class="nav-link">JENIS TES</a></li>
                                 <li role="presentation" class="nav-item"><a href="#lokasi" aria-controls="lokasi" role="tab" data-toggle="tab" class="nav-link">LOKASI *</a></li>
                             </ul>
-                            <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="home">
+
+                                <div role="tabpane1" class="tab-pane active" id="home">
                                     <hr>
                                     <table class="table">
                                         <tr>
@@ -193,8 +195,8 @@
                                             </td>
                                             <td></td>
                                             <td align="left">
-                                                <font color="#1565C0"><b>13 JANUARI 2024 - 14 FEBRUARI 2024</b>
-                                                </font>
+
+                                                <font color="#1565C0"><b>13 JANUARI 2024 - 14 FEBRUARI 2024</b></font>
                                             </td>
                                         </tr>
                                         <tr>
@@ -203,8 +205,8 @@
                                             </td>
                                             <td></td>
                                             <td align="left">
-                                                <font color="#1565C0"><b>22 DESEMBER 2023 - 14 JANUARI 2024</b>
-                                                </font>
+
+                                                <font color="#1565C0"><b>22 DESEMBER 2023 - 14 JANUARI 2024</b></font>
                                             </td>
                                         </tr>
                                         <tr>
@@ -213,6 +215,7 @@
                                             </td>
                                             <td></td>
                                             <td align="left">
+
                                                 <font color="#1565C0"><b>15 FEBRUARI 2024 - 20 MARET 2024</b></font>
                                             </td>
                                         </tr>
@@ -222,6 +225,7 @@
                                             </td>
                                             <td></td>
                                             <td align="left">
+
                                                 <font color="#1565C0"><b>18 MARET 2024 - 08 MEI 2024</b></font>
                                             </td>
                                         </tr>
@@ -231,6 +235,7 @@
                                             </td>
                                             <td></td>
                                             <td align="left">
+
                                                 <font color="#1565C0"><b>10 MEI 2024 - 06 JUNI 2024</b></font>
                                             </td>
                                         </tr>
@@ -240,24 +245,28 @@
                                             </td>
                                             <td></td>
                                             <td align="left">
+
                                                 <font color="#1565C0"><b>10 JUNI 2024 - 04 JULI 2024</b></font>
                                             </td>
                                         </tr>
                                     </table>
                                 </div>
-                                <div role="tabpanel" class="tab-pane" id="test">
+                                <div role="tabpane2" class="tab-pane" id="test">
                                     <hr>
                                     <table class="table">
+
                                         <tr>
                                             <td align="left">
                                                 <b>JPS</b>
                                             </td>
                                             <td></td>
                                             <td align="left">
-                                                <font color="#1565C0"><b>Nilai Rapor + Wawancara Lisan (Onsite)</b>
-                                                </font>
+                                                <font color="#1565C0"><b>Nilai Rapor + Wawancara Lisan (Onsite)</b></font>
                                             </td>
                                         </tr>
+
+
+
                                         <tr>
                                             <td align="left">
                                                 <b>PMDK </b>
@@ -267,6 +276,9 @@
                                                 <font color="#1565C0"><b>Nilai Rapor + Wawancara Tertulis</b></font>
                                             </td>
                                         </tr>
+
+
+
                                         <tr>
                                             <td align="left">
                                                 <b>USM 1</b>
@@ -276,6 +288,9 @@
                                                 <font color="#1565C0"><b>Tes Akademik</b></font>
                                             </td>
                                         </tr>
+
+
+
                                         <tr>
                                             <td align="left">
                                                 <b>USM 2</b>
@@ -285,6 +300,9 @@
                                                 <font color="#1565C0"><b>Tes Akademik + Psikotes</b></font>
                                             </td>
                                         </tr>
+
+
+
                                         <tr>
                                             <td align="left">
                                                 <b>USM 3</b>
@@ -294,6 +312,9 @@
                                                 <font color="#1565C0"><b>Tes Akademik + Psikotes</b></font>
                                             </td>
                                         </tr>
+
+
+
                                         <tr>
                                             <td align="left">
                                                 <b>UTBK</b>
@@ -303,37 +324,42 @@
                                                 <font color="#1565C0"><b>Nilai UTBK + Psikotes</b></font>
                                             </td>
                                         </tr>
+
+
                                     </table>
                                 </div>
-                                <div role="tabpanel" class="tab-pane" id="lokasi">
+                                <div role="tabpane3" class="tab-pane" id="lokasi">
                                     <span class='alert-danger'>* HANYA UNTUK USM DENGAN TES AKADEMIK ONSITE</span>
                                     <table class="table">
                                         <tr>
-                                            <td><b>Kampus Institut Teknologi Del</b></td>
+                                            <td>Kampus Institut Teknologi Del</td>
                                             <td></td>
                                             <td>
-                                                Jl. Sisingamangaraja, Sitoluama<br>
-                                                Laguboti, Toba Samosir, Sumatera Utara
+                                                Jl. Sisingamangaraja, Sitoluama
+                                                Laguboti,
+                                                <br>Toba Samosir
+                                                Sumatera Utara
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td><b>Medan</b></td>
+                                            <td>Medan</td>
                                             <td></td>
                                             <td>
                                                 Kampus Universitas HKBP Nommensen (Medan)
-                                                Jl Perintis Kemerdekaan No.23, Perintis, Medan
+                                                <br>Jl Perintis Kemerdekaan No.23, Perintis, Medan
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td><b>Jakarta</b></td>
+                                            <td>Jakarta</td>
                                             <td></td>
                                             <td>
-                                                Sopo Del Office Towers & Lifestyle Tower A Lt. 9<br>
-                                                Jl. Mega Kuningan Barat III Lot 10.1-6
-                                                Jakarta Selatan 12950
-                                                No. tlp : 021 - 5080 6565
+                                                Sopo Del Office Towers & Lifestyle Tower A Lt. 9
+                                                <br />Jl. Mega Kuningan Barat III Lot 10.1-6
+                                                <br />Jakarta Selatan 12950
+                                                <br />No. tlp : 021 - 5080 6565
                                             </td>
                                         </tr>
+
                                     </table>
                                 </div>
                             </div>
