@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-param" content="_csrf-frontend">
-        <meta name="csrf-token" content="QCkU7jtrAqFaZKwSC_eNzIq-GxSNSwJnyUNICgAFDpwBU1uBcB1G0BMIwip7x9-a34h-XMcgOxS6KnB-SUx0-g==">
-        <title>SPMB</title>
-        <link href="assets/css/style.css" rel="stylesheet">
-        <link href="assets/css/chatbot.css" rel="stylesheet">
-    </head>
-    
-    <body>
-        <div class="wrap">
-            <nav id="w0" class="navbar-inverse navbar-fixed-top navbar">
-                <div class="container">
-                    <div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w0-collapse"><span class="sr-only">Toggle navigation</span>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-param" content="_csrf-frontend">
+    <meta name="csrf-token" content="QCkU7jtrAqFaZKwSC_eNzIq-GxSNSwJnyUNICgAFDpwBU1uBcB1G0BMIwip7x9-a34h-XMcgOxS6KnB-SUx0-g==">
+    <title>SPMB</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/chatbot.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <nav id="w0" class="navbar-inverse navbar-fixed-top navbar">
+            <div class="container">
+                <div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w0-collapse"><span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span></button><a class="navbar-brand" href="/index.php"></a></div>
@@ -108,48 +115,45 @@
                                         <div class="carousel-inner acc_slider" style="height:350px;">
                                             <div class="item active center">
                                                 <a href="image/PendaftaranPMDK_V2.jpg" target="_blank" class="pointer">
-                                                    <img id="slide" src="{{ asset('assets/images/del/PendaftaranPMDK_V2.jpg') }}"  alt="Slide 1" style=" margin:0px;">
-                                                </a>
+                                                    <img src="{{ asset('assets/images/del/PendaftaranPMDK_V2.jpg') }}"  alt="Slide 1" style=" margin:0px;"></a>
                                                     <div class="carousel-caption  d-none d-md-block">
                                                         <a>ALUR PENDAFTARAN PMDK</a>
                                                     </div>
                                                 </div>
                                                 <div class="item center">
                                                     <a href="image/PendaftaranUSM_V2.jpg" target="_blank" class="pointer">
-                                                        <img id="slide" src="{{ asset('assets/images/del/PendaftaranUSM_V2.jpg') }}" alt="Slide 2" style=" margin:0px;">
+                                                        <img src="{{ asset('assets/images/del/PendaftaranUSM_V2.jpg') }}" alt="Slide 2" style=" margin:0px;">
                                                     </a>
                                                     <div class="carousel-caption">
-                        
+
                                                     </div>
                                                 </div>
                                              <div class="item center">
                                                 <a href="image/PendaftaranUTBK_V2.jpg" target="_blank" class="pointer">
-                                                    <img id="slide" src="{{ asset('assets/images/del/PendaftaranUTBK_V2.jpg') }}" alt="Slide 3" style=" margin:0px;">
+                                                    <img src="{{ asset('assets/images/del/PendaftaranUTBK_V2.jpg') }}" alt="Slide 3" style=" margin:0px;">
                                                 </a>
                                                 <div class="carousel-caption">
-                        
+
                                                 </div>
                                             </div>
                                             <div class="item center">
                                                 <a href="image/Ulang.jpg" target="_blank" class="pointer">
-                                                    <img id="slide" src="{{ asset('assets/images/del/Ulang.jpg') }}" alt="Slide 4" style=" margin:0px;">
+                                                    <img src="{{ asset('assets/images/del/Ulang.jpg') }}" alt="Slide 2" style=" margin:0px;">
                                                 </a>
                                                 <div class="carousel-caption">
-                        
+
                                                 </div>
                                             </div>
                                             <div class="item center">
                                                 <a href="image/Jalur.jpg" target="_blank" class="pointer">
-                                                    <img id="slide" src="{{ asset('assets/images/del/Jalur.jpg') }}" alt="Slide 5" style=" margin:0px;">
+                                                    <img src="{{ asset('assets/images/del/Jalur.jpg') }}" alt="Slide 2" style=" margin:0px;">
                                                 </a>
                                                 <div class="carousel-caption">
-                        
+
                                                 </div>
                                             </div>
-                                            <div class="item center">
-                                                <a href="image/del.jpg" target="_blank" class="pointer">
-                                                    <img id="slide" src="{{ asset('assets/images/del/del.jpg') }}" alt="Slide 6" style=" margin:0px;">
-                                                </a>
+                                            {{-- <div class="item center">
+                                                <img src="image/slider001.jpg" alt="Slide 2" style=" margin:0px;">
                                                 <div class="carousel-caption">
                         
                                                 </div>
@@ -161,13 +165,15 @@
                                                 <div class="carousel-caption">
                         
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                     </center>
-                                    <a id="prevButton" href="#carousel-example-generic" class="carousel-control left" data-slide="prev" role="button">
+
+                                    <!-- Control -->
+                                    <a href="#carousel-example-generic" class="carousel-control left" data-slide="prev" role="button">
                                         <span class="glyphicon glyphicon-chevron-left"></span>
                                     </a>
-                                    <a id="nextButton" href="#carousel-example-generic" class="carousel-control right" data-slide="next" role="button">
+                                    <a href="#carousel-example-generic" class="carousel-control right" data-slide="next" role="button">
                                         <span class="glyphicon glyphicon-chevron-right"></span>
                                     </a>
                                 </div>
@@ -430,27 +436,27 @@
                     </div>
                 </div>
 
-                <footer class="footer">
-                    <div class="container">
-                        <footer class="site-footer">
-                            <div class="container">
-                                <div class="row">
-                                    <hr>
-                                    <p class="pull-left" style="color: #004D40">&copy; <b>SPMB Institut Teknologi Del 2024</b></p>
-                                    <p class="pull-right"><img src="/assets/images/logo_del.png" height="60" width="60"></p>
-                                    <p class="pull-right"><img src="/assets/images/yayasandel.jpg" height="60" width="60"></p>
-                                    <p class="pull-right"><img src="/assets/images/smaungguldel.jpg" height="60" width="60"></p>
-                                    </hr>
-                                </div>
+            <footer class="footer">
+                <div class="container">
+                    <footer class="site-footer">
+                        <div class="container">
+                            <div class="row">
+                                <hr>
+                                <p class="pull-left" style="color: #004D40">&copy; <b>SPMB Institut Teknologi Del 2024</b></p>
+                                <p class="pull-right"><img src="/assets/images/logo_del.png" height="60" width="60"></p>
+                                <p class="pull-right"><img src="/assets/images/yayasandel.jpg" height="60" width="60"></p>
+                                <p class="pull-right"><img src="/assets/images/smaungguldel.jpg" height="60" width="60"></p>
+                                </hr>
                             </div>
-                        </footer>
-                    </div>
-                </footer>
-                <!-- <script src="/assets/90657b14/jquery.js"></script>
+                        </div>
+                    </footer>
+                </div>
+            </footer>
+            <!-- <script src="/assets/90657b14/jquery.js"></script>
                 <script src="bootstrap.js"></script> -->
 
-                <!--Start of Tawk.to Script-->
-                <!-- <script type="text/javascript">
+            <!--Start of Tawk.to Script-->
+            <!-- <script type="text/javascript">
                     var Tawk_API = Tawk_API || {};
                     Tawk_API.onLoad = function() {
                         // Tawk.to widget loaded, you can perform additional actions here if needed
@@ -465,69 +471,70 @@
                     })();
                 </script> -->
 
-                <!--End of Tawk.to Script-->
-                <script src="assets/js/chatbot.js"></script>
-                <script src="assets/js/slideshow.js"></script>
-                <script>
-                    // Menampilkan dropdown menu saat menu info pendaftaran diklik
-                    document.getElementById("info-pendaftaran").addEventListener("click", function(event) {
-                        event.preventDefault();
-                        document.getElementById("dropdown-info").classList.toggle("show");
-                    });
-                
-                    // Menampilkan dropdown menu saat menu berita diklik
-                    document.getElementById("menu-berita").addEventListener("click", function(event) {
-                        event.preventDefault();
-                        document.getElementById("dropdown-berita").classList.toggle("show");
-                    });
-                
-                    // Menampilkan dropdown menu saat menu login diklik
-                    document.getElementById("menu-login").addEventListener("click", function(event) {
-                        event.preventDefault();
-                        document.getElementById("dropdown-login").classList.toggle("show");
-                    });
-                
-                    // Menyembunyikan dropdown menu saat mengklik di luar dropdown
-                    window.onclick = function(event) {
-                        if (!event.target.matches('.dropdown-toggle')) {
-                            var dropdowns = document.getElementsByClassName("dropdown-menu");
-                            for (var i = 0; i < dropdowns.length; i++) {
-                                var openDropdown = dropdowns[i];
-                                if (openDropdown.classList.contains('show')) {
-                                    openDropdown.classList.remove('show');
-                                }
+            <!--End of Tawk.to Script-->
+            <script src="assets/js/chatbot.js"></script>
+            <script src="assets/js/slideshow.js"></script>
+            <script>
+                // Menampilkan dropdown menu saat menu info pendaftaran diklik
+                document.getElementById("info-pendaftaran").addEventListener("click", function(event) {
+                    event.preventDefault();
+                    document.getElementById("dropdown-info").classList.toggle("show");
+                });
+
+                // Menampilkan dropdown menu saat menu berita diklik
+                document.getElementById("menu-berita").addEventListener("click", function(event) {
+                    event.preventDefault();
+                    document.getElementById("dropdown-berita").classList.toggle("show");
+                });
+
+                // Menampilkan dropdown menu saat menu login diklik
+                document.getElementById("menu-login").addEventListener("click", function(event) {
+                    event.preventDefault();
+                    document.getElementById("dropdown-login").classList.toggle("show");
+                });
+
+                // Menyembunyikan dropdown menu saat mengklik di luar dropdown
+                window.onclick = function(event) {
+                    if (!event.target.matches('.dropdown-toggle')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-menu");
+                        for (var i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
                             }
                         }
                     }
-                </script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
-                <script>
-                    // Skrip jQuery untuk menangani perpindahan tab
-                    $(document).ready(function(){
-                        // Tangani klik pada menu "JADWAL PENDAFTARAN"
-                        $('a[href="#home"]').on('click', function(e) {
-                            e.preventDefault();
-                            // Tampilkan tab yang sesuai
-                            $('.nav-tabs a[href="#home"]').tab('show');
-                        });
-
-                        // Tangani klik pada menu "JENIS TES"
-                        $('a[href="#test"]').on('click', function(e) {
-                            e.preventDefault();
-                            // Tampilkan tab yang sesuai
-                            $('.nav-tabs a[href="#test"]').tab('show');
-                        });
-
-                        // Tangani klik pada menu "LOKASI"
-                        $('a[href="#lokasi"]').on('click', function(e) {
-                            e.preventDefault();
-                            // Tampilkan tab yang sesuai
-                            $('.nav-tabs a[href="#lokasi"]').tab('show');
-                        });
+                }
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+            <script>
+                // Skrip jQuery untuk menangani perpindahan tab
+                $(document).ready(function() {
+                    // Tangani klik pada menu "JADWAL PENDAFTARAN"
+                    $('a[href="#home"]').on('click', function(e) {
+                        e.preventDefault();
+                        // Tampilkan tab yang sesuai
+                        $('.nav-tabs a[href="#home"]').tab('show');
                     });
-                </script>
-            </div>
+
+                    // Tangani klik pada menu "JENIS TES"
+                    $('a[href="#test"]').on('click', function(e) {
+                        e.preventDefault();
+                        // Tampilkan tab yang sesuai
+                        $('.nav-tabs a[href="#test"]').tab('show');
+                    });
+
+                    // Tangani klik pada menu "LOKASI"
+                    $('a[href="#lokasi"]').on('click', function(e) {
+                        e.preventDefault();
+                        // Tampilkan tab yang sesuai
+                        $('.nav-tabs a[href="#lokasi"]').tab('show');
+                    });
+                });
+            </script>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
