@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -424,35 +423,28 @@
                     <div id="chatbot-content" class="chatbot-content">
                         <div class="chat-message" id="welcome-message">
                             <p><strong>Admin SPMB IT Del</strong></p>
-                            <p>Hello! I'm the Admin of SPMB IT Del, your AI powered assistant here to help you with all your needs! 😊</p>
-                            <p>May I know what you want to ask about SPMB IT Del?</p>
+                            <p>Hi there! 👋 I'm the Admin of SPMB IT Del, your AI powered assistant here to help you with all your needs!</p>
+                            <p>How can I assist you today?</p>
                         </div>
-                        <div class="suggestions">
-                            <div class="left-suggestions">
-                                <p><strong>Suggestions:</strong></p>
-                                <ul>
-                                    <li onclick="selectSuggestion('Selection')">Selection</li>
-                                    <li onclick="selectSuggestion('Question')">Question</li>
-                                    <li onclick="selectSuggestion('TimeTable')">TimeTable</li>
-                                    <li onclick="selectSuggestion('StudyProgram')">StudyProgram</li>
-                                    <li onclick="selectSuggestion('Scholarship')">Scholarship</li>
-                                </ul>
-                            </div>
-                            <div class="right-suggestions">
-                                <p><strong>Suggestions:</strong></p>
-                                <ul>
-                                    <li onclick="selectSuggestion('Cost')">Cost</li>
-                                    <li onclick="selectSuggestion('Facility')">Facility</li>
-                                    <li onclick="selectSuggestion('Campus')">Campus</li>
-                                    <li onclick="selectSuggestion('Contact')">Contact</li>
-                                    <li onclick="selectSuggestion('Other')">Other</li>
-                                </ul>
-                            </div>
+                        <div id="suggestions" class="suggestions">
+                            <p><strong>Suggestions:</strong></p>
+                            <ul>
+                                <li onclick="selectSuggestion('Selection')">Selection</li>
+                                <li onclick="selectSuggestion('Question')">Question</li>
+                                <li onclick="selectSuggestion('TimeTable')">TimeTable</li>
+                                <li onclick="selectSuggestion('StudyProgram')">StudyProgram</li>
+                                <li onclick="selectSuggestion('Scholarship')">Scholarship</li>
+                                <li onclick="selectSuggestion('Cost')">Cost</li>
+                                <li onclick="selectSuggestion('Facility')">Facility</li>
+                                <li onclick="selectSuggestion('Campus')">Campus</li>
+                                <li onclick="selectSuggestion('Contact')">Contact</li>
+                                <li onclick="selectSuggestion('Other')">Other</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="chatbot-input">
+                    <div id="chat-input" class="chat-input" style="display: none;">
                         <input type="text" id="user-input" placeholder="Type your message...">
-                        <button onclick="sendMessage()" style="display: block;">Send</button>
+                        <button onclick="sendMessage()">Send</button>
                     </div>
                 </div>
             </div>

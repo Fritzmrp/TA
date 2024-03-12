@@ -1,4 +1,3 @@
-/* Chatbot button styling */
 .chatbot-button {
     position: fixed;
     bottom: 20px;
@@ -9,13 +8,13 @@
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 9999; /* Make sure it's above other content */
+    z-index: 9999;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .chatbot-button:hover {
     background-color: #7b1fa2;
-    transform: scale(1.1); /* Add slight scale effect on hover */
+    transform: scale(1.1);
 }
 
 .chatbot-button img {
@@ -23,18 +22,18 @@
     height: auto;
 }
 
-/* Chatbot container styling */
 .chatbot-container {
     display: none;
     position: fixed;
-    bottom: 90px; /* Adjust as needed */
+    bottom: 90px; 
     right: 20px;
     width: 300px;
+    max-height: calc(100vh - 120px); 
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 9998; /* Make sure it's below the button */
+    z-index: 9998; 
 }
 
 .chatbot-header {
@@ -50,6 +49,14 @@
     margin: 0;
 }
 
+.chatbot-container.open {
+    height: 665px; 
+}
+
+.chatbot-container.open .chatbot-content {
+    height: 600px; 
+}
+
 .close-chatbot {
     float: right;
     font-size: 20px;
@@ -57,15 +64,16 @@
     cursor: pointer;
 }
 
+.close-chatbot:hover {
+    color: #f00;
+}
+
 .chatbot-content {
     padding: 20px;
-    overflow-y: auto; /* Allow content to be scrolled if it exceeds container height */
-    max-height: 300px; /* Adjust as needed */
+    overflow-y: auto; 
 }
 
 .suggestions {
-    display: flex;
-    justify-content: space-between;
     margin-top: 20px;
 }
 
@@ -93,18 +101,15 @@
     background-color: #7b1fa2;
 }
 
-.chatbot-input {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
+.chat-input {
+    display: inline-flex;
 }
 
-.chatbot-input input {
-    flex: 1;
+.chat-input input {
     padding: 8px;
 }
 
-.chatbot-input button {
+.chat-input button {
     background-color: #8E24AA;
     color: #fff;
     padding: 8px 16px;
@@ -114,6 +119,6 @@
     transition: background-color 0.3s;
 }
 
-.chatbot-input button:hover {
+.chat-input button:hover {
     background-color: #7b1fa2;
 }

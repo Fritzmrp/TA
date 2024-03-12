@@ -31,4 +31,3 @@ nextButton.addEventListener('click', showNextImage);
 prevButton.addEventListener('click', showPreviousImage);
 
 setInterval(showNextImage, 3000);
-
