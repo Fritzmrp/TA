@@ -7,6 +7,7 @@
         <meta name="csrf-param" content="_csrf-frontend">
         <meta name="csrf-token" content="QCkU7jtrAqFaZKwSC_eNzIq-GxSNSwJnyUNICgAFDpwBU1uBcB1G0BMIwip7x9-a34h-XMcgOxS6KnB-SUx0-g==">
         <title>SPMB</title>
+        <link rel="shortcut icon" href="/assets/images/logo_del.png" type="image/x-icon">
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/chatbot.css" rel="stylesheet">
         <!-- Bootstrap CSS -->
