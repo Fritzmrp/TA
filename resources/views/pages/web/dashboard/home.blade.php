@@ -152,12 +152,16 @@
                                             </div>
                                         </div>
                                         <div class="item center">
-                                            <img src="{{ asset('assets/images/del/del2.jpg') }}" alt="Slide 2" style=" margin:0px;">
+                                            <a href="image/del2.jpg" target="_blank" class="pointer">
+                                                <img src="{{ asset('assets/images/del/del2.jpg') }}" alt="Slide 2" style=" margin:0px;">
+                                            </a>
                                             <div class="carousel-caption">
                                             </div>
                                         </div>
                                         <div class="item center">
-                                            <img src="{{ asset('assets/images/del/del.jpg') }}" alt="Slide 2" style=" margin:0px;">
+                                            <a href="image/del.jpg" target="_blank" class="pointer">
+                                                <img src="{{ asset('assets/images/del/del.jpg') }}" alt="Slide 2" style=" margin:0px;">
+                                            </a>
                                             <div class="carousel-caption">
 
                                             </div>
