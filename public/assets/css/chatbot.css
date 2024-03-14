@@ -23,6 +23,7 @@
     height: auto;
 }
 
+/* CSS untuk kontainer chatbot */
 .chatbot-container {
     display: none;
     position: fixed;
@@ -37,6 +38,7 @@
     z-index: 9998; 
 }
 
+/* CSS untuk header chatbot */
 .chatbot-header {
     background-color: #8E24AA;
     color: #fff;
@@ -50,45 +52,19 @@
     margin: 0;
 }
 
-.chatbot-container.open {
-    height: 665px; 
-}
-
-.chatbot-container.open .chatbot-content {
-    height: 600px; 
-}
-
-.close-chatbot {
-    float: right;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-chatbot:hover {
-    color: #f00;
-}
-
+/* CSS untuk konten chatbot */
 .chatbot-content {
     padding: 20px;
     overflow-y: auto; 
 }
 
-.suggestions {
-    margin-top: 20px;
-}
-
-.left-suggestions,
-.right-suggestions {
-    width: 45%;
-}
-
-.suggestions ul {
+/* CSS untuk kategori */
+.categories ul {
     list-style-type: none;
     padding: 0;
 }
 
-.suggestions li {
+.categories li {
     background-color: #8E24AA;
     color: #fff;
     padding: 8px;
@@ -98,10 +74,20 @@
     transition: background-color 0.3s;
 }
 
-.suggestions li:hover {
+.categories li:hover {
     background-color: #7b1fa2;
 }
 
+/* Menyesuaikan gaya untuk pesan pembuka */
+#welcome-message {
+    margin-bottom: 20px;
+}
+
+.chat-message p {
+    margin: 5px 0;
+}
+
+/* CSS untuk input chat */
 .chat-input {
     display: inline-flex;
 }

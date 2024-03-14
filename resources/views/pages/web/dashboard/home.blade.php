@@ -383,7 +383,7 @@
                         </div>
                     </div>
                     <div id="chatbot-button" class="chatbot-button">
-                        <img src="assets/images/chatbot.png" alt="Chatbot Icon">
+                        <img src="assets/images/chatbot.png" alt="Ikon Chatbot">
                     </div>
                     <div id="chatbot-container" class="chatbot-container">
                         <div class="chatbot-header">
@@ -393,28 +393,26 @@
                         <div id="chatbot-content" class="chatbot-content">
                             <div class="chat-message" id="welcome-message">
                                 <p><strong>Admin SPMB IT Del</strong></p>
-                                <p>Hi there! 👋 I'm the Admin of SPMB IT Del, your AI powered assistant here to help you with all your needs!</p>
-                                <p>How can I assist you today?</p>
+                                <p>Halo! Selamat datang di chatbot FAQ layanan SPMB IT Del. Ada yang bisa saya bantu?</p>
                             </div>
-                            <div id="suggestions" class="suggestions">
-                                <p><strong>Suggestions:</strong></p>
+                            <div id="categories" class="categories">
+                                <p><strong>Kategori:</strong></p>
                                 <ul>
-                                    <li onclick="selectSuggestion('Selection')">Selection</li>
-                                    <li onclick="selectSuggestion('Question')">Question</li>
-                                    <li onclick="selectSuggestion('TimeTable')">TimeTable</li>
-                                    <li onclick="selectSuggestion('StudyProgram')">StudyProgram</li>
-                                    <li onclick="selectSuggestion('Scholarship')">Scholarship</li>
-                                    <li onclick="selectSuggestion('Cost')">Cost</li>
-                                    <li onclick="selectSuggestion('Facility')">Facility</li>
-                                    <li onclick="selectSuggestion('Campus')">Campus</li>
-                                    <li onclick="selectSuggestion('Contact')">Contact</li>
-                                    <li onclick="selectSuggestion('Other')">Other</li>
+                                    <li onclick="selectCategory('Seleksi')">Seleksi</li>
+                                    <li onclick="selectCategory('Pendaftaran')">Pendaftaran</li>
+                                    <li onclick="selectCategory('Jadwal')">Jadwal</li>
+                                    <li onclick="selectCategory('Biaya')">Biaya</li>
+                                    <li onclick="selectCategory('Beasiswa')">Beasiswa</li>
+                                    <li onclick="selectCategory('Fasilitas')">Fasilitas</li>
+                                    <li onclick="selectCategory('Program Studi')">Program Studi</li>
+                                    <li onclick="selectCategory('Kontak')">Kontak</li>
+                                    <li onclick="selectCategory('Lainnya')">Lainnya</li>
                                 </ul>
                             </div>
                         </div>
                         <div id="chat-input" class="chat-input" style="display: none;">
-                            <input type="text" id="user-input" placeholder="Type your message...">
-                            <button onclick="sendMessage()">Send</button>
+                            <input type="text" id="user-input" placeholder="Ketik pesan Anda...">
+                            <button onclick="sendMessage()">Kirim</button>
                         </div>
                     </div>
                 </div>
