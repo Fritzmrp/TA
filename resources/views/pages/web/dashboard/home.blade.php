@@ -411,10 +411,14 @@
                             </div>
                         </div>
                         <div id="chat-input" class="chat-input" style="display: none;">
+                            <div id="question-buttons" style="display: none;">
+                                <p><strong>Pilih pertanyaan:</strong></p>
+                                <div id="question-buttons-container"></div>
+                            </div>
                             <input type="text" id="user-input" placeholder="Ketik pesan Anda...">
                             <button onclick="sendMessage()">Kirim</button>
                         </div>
-                    </div>
+                    </div>             
                 </div>
 
                 <footer class="footer">
