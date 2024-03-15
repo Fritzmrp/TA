@@ -399,7 +399,7 @@
                                 <p><strong>Kategori:</strong></p>
                                 <ul>
                                     <li onclick="selectCategory('Seleksi')">Seleksi</li>
-                                    <li onclick="selectCategory('Pendaftaran')">Pendaftaran</li>
+                                    <li onclick="selectCategory1('Pendaftaran')">Pendaftaran</li>
                                     <li onclick="selectCategory('Jadwal')">Jadwal</li>
                                     <li onclick="selectCategory('Biaya')">Biaya</li>
                                     <li onclick="selectCategory('Beasiswa')">Beasiswa</li>

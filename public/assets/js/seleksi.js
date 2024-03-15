@@ -105,9 +105,9 @@ function selectCategory(category) {
         case 'Seleksi':
             message = "Anda memilih 'Seleksi'. Pilih pertanyaan di bawah ini:";
             displayMessage(message, 'admin');
-            displayQuestionButtons();
+            displayQuestionButtons(seleksiRules); // Panggil fungsi untuk menampilkan pertanyaan kategori Seleksi dengan aturan yang didefinisikan di seleksiRules
             break;
-        // tambahkan case untuk kategori lain jika diperlukan
+        // Tambahkan case untuk kategori lain jika diperlukan
         default:
             message = "Bagaimana saya bisa membantu Anda?";
             displayMessage(message, 'admin');
@@ -122,7 +122,7 @@ function displayQuestionButtons() {
         "Jalur seleksi apa saja yang tersedia di Institut Teknologi Del?",
         "Persyaratan apa saja yang harus dipenuhi untuk mengikuti jalur seleksi SPMB IT Del?",
         "Bagaimana cara melihat hasil seleksi SPMB IT Del?",
-        "Kapan pengumuman hasil seleksi SPMB IT Del?"
+        "Kapan pengumuman hasil seleksi SPMB IT Del?",
     ];
 
     var questionList = document.createElement('ul');
@@ -142,7 +142,7 @@ function displayQuestionButtons() {
 }
 
 // Fungsi untuk mencocokkan input pengguna dengan aturan yang ada
-function matchRule(input) {
+function matchRule(input, seleksiRules, additionalRules) {
     input = input.toLowerCase(); // Ubah input menjadi huruf kecil untuk pencocokan yang tidak case-sensitive
 
     // Periksa aturan utama
@@ -170,19 +170,19 @@ function matchRule(input) {
     
     // Penanganan khusus untuk pertanyaan "Persyaratan seleksi" dan "syarat seleksi"
     if (input.includes("persyaratan seleksi") || input.includes("syarat seleksi")) {
-        var persyaratanSeleksiAnswer = "Berikut merupakan persyaratan yang harus dipenuhi oleh calon pendaftar SPMB IT Del. Terdapat dua persyaratan yaitu persyaratan umum dan persyaratan khusus program studi:\n\na) Persyaratan umum\n1. Memiliki minat yang tinggi untuk melanjutkan studi di IT Del dan akan mendaftarkan diri sebagai mahasiswa IT Del apabila dinyatakan lulus seleksi untuk program USM;\n2. Siswa berasal dari jurusan yang tidak termasuk dalam kelompok Ilmu Sosial, Budaya atau Bahasa;\n3. Lulusan SMA atau SMK Teknik pada semua jurusan dengan tahun ijazah 2021, 2022, 2023;\n4. Usia maksimum 21 tahun per 31 Agustus 2024;\n5. Mengikuti tes akademik daring berupa Matematika, Bahasa Inggris, dan Tes Potensi Akademik;\n6. Dapat memilih maksimal 3 pilihan program studi, dari 9 program studi yang ada di IT Del.\n\nb) Persyaratan khusus program studi\na) Program Studi S1 Teknik Elektro: \n• *Tidak Buta Warna, dibuktikan dengan melampirkan Surat Keterangan Tidak Buta Warna dari Dokter Spesialis Mata \n• SMA jurusan IPA/MIA atau SMK Teknik (Elektro, Elektronika, Listrik)\nb) Program Studi S1 Teknik Bioproses: \n• *Tidak Buta Warna, dibuktikan dengan melampirkan Surat Keterangan Tidak Buta Warna dari Dokter Spesialis Mata \n• SMA jurusan IPA/MIA.\nc) Program Studi Manajemen Rekayasa: \n• Mata \n• SMA jurusan IPA/MIA.\nd) Program Studi S1 Informatika, S1 Sistem Informasi, D4 Teknologi Rekayasa Perangkat Lunak, D3 Teknologi Informasi dan D3 Teknologi Komputer: \n• SMA jurusan IPA/MIA atau SMK Teknik (Informatika, Komputer).\n\nKet *: disampaikan pada saat daftar ulang daring";
+        var persyaratanSeleksiAnswer = "Berikut merupakan persyaratan yang harus dipenuhi oleh calon pendaftar SPMB IT Del. Terdapat dua persyaratan yaitu persyaratan umum dan persyaratan khusus program studi:\n\na) Persyaratan umum\n1. Memiliki minat yang tinggi untuk melanjutkan studi di IT Del dan akan mendaftarkan diri sebagai mahasiswa IT Del apabila dinyatakan lulus seleksi untuk program USM;\n2. Siswa berasal dari jurusan yang tidak termasuk dalam kelompok Ilmu Sosial, Budaya atau Bahasa;\n3. Lulusan SMA atau SMK Teknik pada semua jurusan dengan tahun ijazah 2021, 2022, 2023;\n4. Usia maksimum 21 tahun per 31 Agustus 2024;\n5. Mengikuti tes akademik daring berupa Matematika, Bahasa Inggris, dan Tes Potensi Akademik;\n6. Dapat memilih maksimal 3 pilihan program studi, dari 9 program studi yang ada di IT Del.\n\nb) Persyaratan khusus program studi\na) Program Studi S1 Teknik Elektro: \n• *Tidak Buta Warna, dibuktikan dengan melampirkan Surat Keterangan Tidak Buta Warna dari Dokter Spesialis Mata \n• SMA jurusan IPA/MIA atau SMK Teknik (Elektro, Elektronika, Listrik)\nb) Program Studi S1 Teknik Bioproses: \n• *Tidak Buta Warna, dibuktikan dengan melampirkan Surat Keterangan Tidak Buta Warna dari Dokter Spesialis Mata \n• SMA jurusan IPA/MIA atau SMK Teknik (Kimia, Rekayasa Perangkat Lunak, Teknik Komputer dan Jaringan, Elektronika, Otomatisasi dan Tata Kelola Perkantoran, Teknik Gambar Bangunan)\nc) Program Studi S1 Informatika: \n• *Tidak Buta Warna, dibuktikan dengan melampirkan Surat Keterangan Tidak Buta Warna dari Dokter Spesialis Mata \n• SMA jurusan IPA/MIA atau SMK Teknik (Rekayasa Perangkat Lunak, Teknik Komputer dan Jaringan, Elektronika, Otomatisasi dan Tata Kelola Perkantoran)\n\n*Khusus untuk program studi S1 Teknik Elektro, S1 Teknik Bioproses, dan S1 Informatika yang mempunyai persyaratan Tidak Buta Warna";
         return persyaratanSeleksiAnswer;
     }
-    
-    return "Maaf, saya tidak mengerti pertanyaan Anda.";
+
+    // Jika tidak ada aturan yang cocok, kembalikan pesan default
+    return "Maaf, saya tidak mengerti pertanyaan Anda tentang seleksi.";
 }
 
 // Fungsi untuk menampilkan jawaban
-function displayAnswer(question) {
-    var answer = matchRule(question);
+function displayAnswer(answer) {
     if (answer.includes('\n')) {
         var answerParts = answer.split('\n');
-        displayMultiPartAnswer(answerParts);
+        answerParts.forEach(part => displayMessage(part, 'admin'));
     } else {
         displayMessage(answer, 'admin');
     }
@@ -191,8 +191,10 @@ function displayAnswer(question) {
 // Fungsi untuk memproses input pengguna
 function processUserInput(input) {
     displayMessage(input, 'user'); // Menampilkan pesan pengguna di chat
-    var answer = matchRule(input);
-    displayMessage(answer, 'admin');
+    if (input.trim() !== '') { // Periksa apakah input tidak kosong
+        var answer = matchRule(input, seleksiRules, additionalRules);
+        displayAnswer(answer);
+    }
 }
 
 // Fungsi untuk menampilkan pesan di chat
