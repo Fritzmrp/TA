@@ -68,3 +68,113 @@ Baik, berikut adalah bagian-bagian kode yang terkait dengan mendefinisikan dan m
    ```
 
 Dalam bagian-bagian kode di atas, aturan-aturan didefinisikan dalam bentuk pasangan pertanyaan dan jawaban, dan kemudian fungsi `matchRule(input)` digunakan untuk mencocokkan input pengguna dengan aturan-aturan yang telah ditentukan. Jika input sesuai dengan aturan yang ada, maka jawaban yang sesuai akan dikembalikan; jika tidak, maka pesan default "Maaf, saya tidak mengerti pertanyaan Anda." akan dikembalikan.
+
+Tentu, berikut adalah bagaimana kelima langkah dalam penggunaan metode rule-based tercermin dalam kode yang Anda berikan:
+
+### 1. Pengelompokan Aturan
+```javascript
+// Rules untuk kategori "Seleksi"
+var seleksiRules = [
+    {
+        question: "Jalur seleksi apa saja yang tersedia di Institut Teknologi Del?",
+        answer: "Di Institut Teknologi Del, terdapat beberapa jalur seleksi seperti Seleksi Bersama Masuk Perguruan Tinggi Negeri (SBMPTN), Seleksi Mandiri, dan jalur prestasi akademik."
+    },
+    // Aturan-aturan lainnya...
+];
+
+// Rules tambahan untuk kategori "Seleksi"
+var additionalRules = [
+    {
+        question: "jalur seleksi",
+        answer: "Jalur seleksi yang disediakan oleh SPMB IT Del adalah sebanyak 6 jalur yaitu sebagai berikut: ..."
+    },
+    // Aturan-aturan lainnya...
+];
+```
+
+### 2. Pencocokan Aturan
+```javascript
+function matchRule(input) {
+    input = input.toLowerCase(); // Ubah input menjadi huruf kecil untuk pencocokan yang tidak case-sensitive
+
+    // Periksa aturan utama
+    for (var i = 0; i < seleksiRules.length; i++) {
+        var rule = seleksiRules[i];
+        var keywords = rule.question.toLowerCase().split(' ');
+        var match = true;
+        keywords.forEach(function(keyword) {
+            if (input.indexOf(keyword) === -1) {
+                match = false;
+            }
+        });
+        if (match) {
+            return rule.answer;
+        }
+    }
+    
+    // Periksa aturan tambahan
+    for (var j = 0; j < additionalRules.length; j++) {
+        var additionalRule = additionalRules[j];
+        if (input.indexOf(additionalRule.question) !== -1) {
+            return additionalRule.answer;
+        }
+    }
+    
+    // Penanganan khusus untuk pertanyaan "Persyaratan seleksi" dan "syarat seleksi"
+    if (input.includes("persyaratan seleksi") || input.includes("syarat seleksi")) {
+        var persyaratanSeleksiAnswer = "Berikut merupakan persyaratan yang harus dipenuhi oleh calon pendaftar SPMB IT Del. ..."
+        return persyaratanSeleksiAnswer;
+    }
+    
+    return "Maaf, saya tidak mengerti pertanyaan Anda.";
+}
+```
+
+### 3. Menampilkan Jawaban
+```javascript
+// Fungsi untuk menampilkan jawaban
+function displayAnswer(question) {
+    var answer = matchRule(question);
+    if (answer.includes('\n')) {
+        var answerParts = answer.split('\n');
+        displayMultiPartAnswer(answerParts);
+    } else {
+        displayMessage(answer, 'admin');
+    }
+}
+```
+
+### 4. Penanganan Kasus Khusus
+```javascript
+// Penanganan khusus untuk pertanyaan "Persyaratan seleksi" dan "syarat seleksi"
+if (input.includes("persyaratan seleksi") || input.includes("syarat seleksi")) {
+    var persyaratanSeleksiAnswer = "Berikut merupakan persyaratan yang harus dipenuhi oleh calon pendaftar SPMB IT Del. ..."
+    return persyaratanSeleksiAnswer;
+}
+```
+
+### 5. Interaksi dengan Pengguna
+```javascript
+// Fungsi untuk menampilkan kategori seleksi
+function selectCategory(category) {
+    document.getElementById('categories').style.display = 'none'; 
+    document.getElementById('chat-input').style.display = 'inline-flex'; 
+
+    var message;
+    switch (category) {
+        case 'Seleksi':
+            message = "Anda memilih 'Seleksi'. Pilih pertanyaan di bawah ini:";
+            displayMessage(message, 'admin');
+            displayQuestionButtons();
+            break;
+        // tambahkan case untuk kategori lain jika diperlukan
+        default:
+            message = "Bagaimana saya bisa membantu Anda?";
+            displayMessage(message, 'admin');
+            break;
+    }
+    document.getElementById('chatbot-container').classList.add('open');
+}
+```
+
+Dalam kode tersebut, Anda dapat melihat bagaimana aturan-aturan dipetakan ke pertanyaan dan jawaban dalam array, bagaimana pencocokan aturan dilakukan berdasarkan input pengguna, bagaimana jawaban ditampilkan, dan bagaimana kasus-kasus khusus ditangani. Selain itu, interaksi dengan pengguna juga ditangani dengan menampilkan kategori, memilih pertanyaan dari kategori tertentu, dan menampilkan pesan yang sesuai.

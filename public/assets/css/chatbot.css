@@ -16,7 +16,6 @@
 .chatbot-button:hover {
     background-color: #7b1fa2;
     transform: scale(1.1);
-    cursor: pointer;
 }
 
 .chatbot-button img {
@@ -37,7 +36,7 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 9998; 
-    overflow-y: auto; /* Menambahkan overflow-y untuk konten chatbot */
+    overflow-y: auto;
 }
 
 /* CSS untuk header chatbot */
@@ -115,7 +114,7 @@
 .question-list {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Menghapus margin agar daftar pertanyaan tidak terpisah dari konten chatbot */
+    margin: 0;
 }
 
 .question-button {

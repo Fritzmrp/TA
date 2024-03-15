@@ -420,7 +420,6 @@
                         </div>
                     </div>             
                 </div>
-
                 <footer class="footer">
                     <div class="container">
                         <footer class="site-footer">
@@ -458,6 +457,8 @@
 
                 <!--End of Tawk.to Script-->
                 <script src="assets/js/chatbot.js"></script>
+                <script src="assets/js/pendaftaran.js"></script>
+                <script src="assets/js/seleksi.js"></script>
                 <script src="assets/js/slideshow.js"></script>
                 <script>
                     // Menampilkan dropdown menu saat menu info pendaftaran diklik
