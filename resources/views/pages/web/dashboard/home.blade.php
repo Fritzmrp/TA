@@ -400,25 +400,19 @@
                         <div id="categories" class="categories">
                             <p><strong>Kategori:</strong></p>
                             <ul>
-                                <li onclick="selectCategory('Seleksi')">Seleksi</li>
-                                <li onclick="selectCategory1('Pendaftaran')">Pendaftaran</li>
-                                <li onclick="selectCategory('Jadwal')">Jadwal</li>
-                                <li onclick="selectCategory('Biaya')">Biaya</li>
-                                <li onclick="selectCategory('Beasiswa')">Beasiswa</li>
-                                <li onclick="selectCategory('Fasilitas')">Fasilitas</li>
-                                <li onclick="selectCategory('Program Studi')">Program Studi</li>
-                                <li onclick="selectCategory('Kontak')">Kontak</li>
-                                <li onclick="selectCategory('Lainnya')">Lainnya</li>
+                                @foreach($kategori as $item)
+                                    <li onclick="selectCategory('{{ $item->nama_kategori }}')">{{ $item->nama_kategori }}</li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
-                    <div id="chat-input" class="chat-input" style="display: none;">
+                    <div id="chatbot-input" class="chatbot-input" style="display: none;">
                         <div id="question-buttons" style="display: none;">
                             <p><strong>Pilih pertanyaan:</strong></p>
                             <div id="question-buttons-container"></div>
                         </div>
                         <input type="text" id="user-input" placeholder="Ketik pesan Anda...">
-                        <button onclick="sendMessage()">Kirim</button>
+                        <button onclick="sendMessage(document.getElementById('user-input').value)">Kirim</button>
                     </div>
                 </div>
             </div>
@@ -526,6 +520,11 @@
                     var chatbotContainer = document.querySelector('.chatbot-container');
                     chatbotContainer.style.display = 'none';
                 }
+            </script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    getKategori();
+                });
             </script>
         </div>
     </div>

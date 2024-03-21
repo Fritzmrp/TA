@@ -11,25 +11,27 @@ var welcomeMessages = [
     "Halo! Ada yang bisa saya bantu?"
 ];
 
-// Fungsi untuk menghasilkan pesan selamat datang secara acak
-function generateWelcomeMessage() {
-    var now = new Date();
-    var hour = now.getHours();
-    var welcomeMessage = welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)];
-
-    if (hour < 12) {
-        welcomeMessage = "Selamat pagi! " + welcomeMessage;
-    } else if (hour < 18) {
-        welcomeMessage = "Selamat siang! " + welcomeMessage;
-    } else {
-        welcomeMessage = "Selamat malam! " + welcomeMessage;
-    }
-
-    document.getElementById('welcome-message').innerHTML = "<p><strong>Admin SPMB IT Del</strong></p><p>" + welcomeMessage + "</p>";
+// Fungsi untuk mengambil kategori dari database dan menampilkannya
+function getKategori() {
+    fetch('/kategori')
+    .then(response => response.json())
+    .then(kategori => {
+        const categoriesList = document.getElementById('categories').querySelector('ul');
+        categoriesList.innerHTML = ''; // Bersihkan daftar kategori sebelum menambahkan yang baru
+        kategori.forEach(kat => {
+            const categoryItem = document.createElement('li');
+            categoryItem.textContent = kat.nama_kategori;
+            categoryItem.onclick = function() {
+                selectCategory(kat.nama_kategori);
+            };
+            categoriesList.appendChild(categoryItem);
+        });
+    })
+    .catch(error => console.error('Error:', error));
 }
 
-// Memanggil fungsi untuk menghasilkan pesan selamat datang secara acak
-generateWelcomeMessage();
+// Memanggil fungsi untuk mengambil kategori saat halaman dimuat
+getKategori();
 
 // Event listener untuk tombol chatbot
 chatbotButton.addEventListener('mouseenter', function() {
@@ -51,14 +53,72 @@ closeChatbotButton.addEventListener('click', function() {
 
 // Event listener untuk toggle chatbot
 chatbotButton.onclick = function () {
-    if (window.getComputedStyle(chatbotContainer).getPropertyValue('display') === 'block') {
-        chatbotContainer.style.display = 'none';
-        chatbotButton.innerHTML = '<img src="assets/images/chatbot.png" alt="Chatbot Icon">';
-    } else {
-        chatbotContainer.style.display = 'block';
-        chatbotButton.innerHTML = closeIcon;
+    if (chatbotContainer) { // Periksa apakah chatbotContainer tidak null
+        if (window.getComputedStyle(chatbotContainer).getPropertyValue('display') === 'block') {
+            chatbotContainer.style.display = 'none';
+            chatbotButton.innerHTML = '<img src="assets/images/chatbot.png" alt="Chatbot Icon">';
+        } else {
+            chatbotContainer.style.display = 'block';
+            chatbotButton.innerHTML = closeIcon;
+        }
     }
 };
+
+function selectCategory(category) {
+    fetch('/pertanyaan/' + category)
+    .then(response => response.json())
+    .then(pertanyaan => {
+        const questionButtonsContainer = document.getElementById('question-buttons-container');
+        questionButtonsContainer.innerHTML = ''; // Bersihkan daftar pertanyaan sebelum menambahkan yang baru
+        pertanyaan.forEach(pert => {
+            const questionButton = document.createElement('button');
+            questionButton.textContent = pert.pertanyaan;
+            questionButton.onclick = function() {
+                sendQuestion(pert.pertanyaan);
+            };
+            questionButtonsContainer.appendChild(questionButton);
+        });
+        // Tampilkan kontainer input pesan
+        document.getElementById('chatbot-input').style.display = 'block';
+        document.getElementById('question-buttons').style.display = 'block'; // Tampilkan daftar pertanyaan
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Fungsi untuk mengirim pertanyaan yang dipilih ke server dan menampilkan jawabannya
+function sendQuestion(question) {
+    // Kirim pertanyaan ke server
+    fetch('/send-pertanyaan', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ pertanyaan: question })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Tampilkan jawaban dari server
+        var chatContent = document.getElementById('chatbot-content');
+        var chatMessage = document.createElement('div');
+        chatMessage.className = 'chat-message';
+        chatMessage.innerHTML = "<p><strong>Admin: </strong>" + data.jawaban + "</p>";
+        chatContent.appendChild(chatMessage);
+        chatContent.scrollTop = chatContent.scrollHeight;
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Fungsi untuk mengirim pesan ke server
+function sendMessage(message) {
+    // Kirim pesan ke server dan tanggapi di sini
+    // Contoh implementasi:
+    var chatContent = document.getElementById('chatbot-content');
+    var chatMessage = document.createElement('div');
+    chatMessage.className = 'chat-message';
+    chatMessage.innerHTML = "<p><strong>Anda: </strong>" + message + "</p>";
+    chatContent.appendChild(chatMessage);
+    chatContent.scrollTop = chatContent.scrollHeight;
+}
 
 // Fungsi untuk menutup chatbot
 function closeChatbot() {

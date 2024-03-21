@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Kategori;
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\ChatbotController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.web.dashboard.home');
-});
+// Route::get('/', function () {
+//     return view('pages.web.dashboard.home');
+// });
+
+Route::get('/', [KategoriController::class, 'index']); // Menggunakan controller untuk menampilkan kategori
+
+
+Route::get('/kategori', [ChatbotController::class, 'getKategori']);
+Route::get('/pertanyaan/{kategori}', [ChatbotController::class, 'getPertanyaanByKategori']);
