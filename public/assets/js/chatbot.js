@@ -11,25 +11,67 @@ var welcomeMessages = [
     "Halo! Ada yang bisa saya bantu?"
 ];
 
-// Fungsi untuk menghasilkan pesan selamat datang secara acak
-function generateWelcomeMessage() {
-    var now = new Date();
-    var hour = now.getHours();
-    var welcomeMessage = welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)];
+// // Fungsi untuk mengambil kategori dari server dan menampilkannya
+// function getKategori() {
+//     fetch('/kategori')
+//     .then(response => response.json())
+//     .then(kategori => {
+//         const categoriesList = document.getElementById('categories').querySelector('ul');
+//         categoriesList.innerHTML = ''; // Bersihkan daftar kategori sebelum menambahkan yang baru
+//         kategori.forEach(kat => {
+//             const categoryItem = document.createElement('li');
+//             categoryItem.textContent = kat.nama_kategori;
+//             categoryItem.addEventListener('click', function() {
+//                 selectCategory(kat.nama_kategori);
+//             });
+//             categoriesList.appendChild(categoryItem);
+//         });
+//     })
+//     .catch(error => console.error('Error:', error));
+// }
 
-    if (hour < 12) {
-        welcomeMessage = "Selamat pagi! " + welcomeMessage;
-    } else if (hour < 18) {
-        welcomeMessage = "Selamat siang! " + welcomeMessage;
-    } else {
-        welcomeMessage = "Selamat malam! " + welcomeMessage;
-    }
+// // Memanggil fungsi untuk mengambil kategori saat halaman dimuat
+// getKategori();
 
-    document.getElementById('welcome-message').innerHTML = "<p><strong>Admin SPMB IT Del</strong></p><p>" + welcomeMessage + "</p>";
+// Fungsi untuk mengambil kategori dari data attribute dan menampilkannya
+function displayKategori() {
+    const categoriesData = document.getElementById('categories').getAttribute('data-kategori');
+    const kategori = JSON.parse(categoriesData);
+    const categoriesList = document.getElementById('categories').querySelector('ul');
+    categoriesList.innerHTML = ''; // Bersihkan daftar kategori sebelum menambahkan yang baru
+    kategori.forEach(kat => {
+        const categoryItem = document.createElement('li');
+        categoryItem.textContent = kat.nama_kategori;
+        categoryItem.addEventListener('click', function() {
+            selectCategory(kat.nama_kategori);
+        });
+        categoriesList.appendChild(categoryItem);
+    });
 }
 
-// Memanggil fungsi untuk menghasilkan pesan selamat datang secara acak
-generateWelcomeMessage();
+// Memanggil fungsi untuk menampilkan kategori saat halaman dimuat
+displayKategori();
+
+
+// // Fungsi untuk menghasilkan pesan selamat datang secara acak
+// function generateWelcomeMessage() {
+//     var now = new Date();
+//     var hour = now.getHours();
+//     var welcomeMessage = welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)];
+
+//     if (hour < 12) {
+//         welcomeMessage = "Selamat pagi! " + welcomeMessage;
+//     } else if (hour < 18) {
+//         welcomeMessage = "Selamat siang! " + welcomeMessage;
+//     } else {
+//         welcomeMessage = "Selamat malam! " + welcomeMessage;
+//     }
+
+//     document.getElementById('welcome-message').innerHTML = "<p><strong>Admin SPMB IT Del</strong></p><p>" + welcomeMessage + "</p>";
+// }
+
+// // Memanggil fungsi untuk menghasilkan pesan selamat datang secara acak
+// generateWelcomeMessage();
 
 // Event listener untuk tombol chatbot
 chatbotButton.addEventListener('mouseenter', function() {

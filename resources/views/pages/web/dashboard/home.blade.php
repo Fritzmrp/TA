@@ -395,7 +395,7 @@
                                 <p><strong>Admin SPMB IT Del</strong></p>
                                 <p>Halo! Selamat datang di chatbot FAQ layanan SPMB IT Del. Ada yang bisa saya bantu?</p>
                             </div>
-                            <div id="categories" class="categories">
+                            {{-- <div id="categories" class="categories">
                                 <p><strong>Kategori:</strong></p>
                                 <ul>
                                     <li onclick="selectCategory('Seleksi')">Seleksi</li>
@@ -408,7 +408,15 @@
                                     <li onclick="selectCategory('Kontak')">Kontak</li>
                                     <li onclick="selectCategory('Lainnya')">Lainnya</li>
                                 </ul>
-                            </div>
+                            </div> --}}
+                            <div id="categories" class="categories" data-kategori="{{ $kategori->toJson() }}">
+                                <p><strong>Kategori:</strong></p>
+                                <ul>
+                                    @foreach($kategori as $kat)
+                                        <li>{{ $kat->nama_kategori }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>                            
                         </div>
                         <div id="chat-input" class="chat-input" style="display: none;">
                             <div id="question-buttons" style="display: none;">
@@ -518,6 +526,12 @@
                             $('.nav-tabs a[href="#lokasi"]').tab('show');
                         });
                     });
+                </script>
+                 <script>
+                    function closeChatbot() {
+                        var chatbotContainer = document.querySelector('.chatbot-container');
+                        chatbotContainer.style.display = 'none';
+                    }
                 </script>
             </div>
         </div>
